@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agile Tracker</title>
+<link rel="stylesheet" href="/static/app.css?v=2"></head>
+<body>
+<div id="auth" hidden>
+  <div class="authbox">
+    <h1>Agile Tracker</h1>
+    <p class="muted">Plan projects, stories and tasks with your team.</p>
+    <input id="a_name" placeholder="Your name (sign up only)" autocomplete="name">
+    <input id="a_email" type="email" placeholder="Email" autocomplete="email">
+    <input id="a_pw" type="password" placeholder="Password (min 8 characters)" autocomplete="current-password">
+    <div class="row"><button class="primary" id="btn_login">Sign in</button><button id="btn_reg">Create account</button></div>
+  </div>
+</div>
+<div id="app" hidden>
+  <header>
+    <strong>Agile Tracker</strong>
+    <span class="grow"></span>
+    <button id="bell" title="Notifications">Notifications <span id="badge" class="badge" hidden>0</span></button>
+    <span id="who" class="muted"></span>
+    <button id="btn_out">Sign out</button>
+  </header>
+  <div id="notes" class="notes" hidden></div>
+  <main>
+    <aside>
+      <h2>Projects</h2>
+      <ul id="plist"></ul>
+      <input id="p_name" placeholder="New project name" maxlength="120">
+      <button id="btn_padd">Add project</button>
+    </aside>
+    <section id="board"><p class="muted empty">Select a project, or add one to get started.</p></section>
+  </main>
+</div>
+<script src="/static/app.js?v=2"></script>
+</body></html>
